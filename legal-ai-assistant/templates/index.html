@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Legal Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    ⚖️ AI Legal Assistant
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Understand Legal Documents with AI</h1>
+    <p>Summarize complex legal text and simplify legal language instantly.</p>
+</div>
+
+<!-- MAIN GRID -->
+<div class="container">
+
+    <!-- LEFT CARD -->
+    <div class="card">
+        <h2>📄 Input Legal Document</h2>
+        <textarea id="text" placeholder="Paste legal document here..."></textarea>
+
+        <div class="buttons">
+    <button class="primary" onclick="summarize()">Summarize</button>
+    <button onclick="simplify()">Simplify</button>
+
+    <br><br>
+
+    <input type="file" id="pdfFile">
+    <button onclick="uploadPDF()">Upload & Summarize PDF</button>
+</div>
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div class="card result-card">
+    <h2>✨ AI Result</h2>
+    <div id="result">Result will appear here...</div>
+
+    <hr style="margin:20px 0">
+
+    <h3>💬 Ask Legal Question</h3>
+    <input id="question" placeholder="Ask about the document...">
+    <button onclick="askQuestion()">Ask AI</button>
+</div>
+
+</div>
+
+<div id="loader" class="loader hidden"></div>
+<div id="toast" class="toast">Copied!</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
